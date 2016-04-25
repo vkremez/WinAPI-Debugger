@@ -1,9 +1,10 @@
+# C union structs in Py
 from ctypes import *
-class barley_amount(Union): _fields_ = [
-("barley_long", ("barley_int", ("barley_char", ]
- c_long),
-c_int),
-c_char * 8),
+class barley_amount(Union): 
+  _fields_ = [
+("barley_long", c_long),
+("barley_int",  c_int),
+("barley_char", c_char * 8)},
 value = raw_input("Enter the amount of barley to put into the beer vat:") my_barley = barley_amount(int(value))
 print "Barley amount as a long: %ld" % my_barley.barley_long
 print "Barley amount as an int: %d" % my_barley.barley_long
