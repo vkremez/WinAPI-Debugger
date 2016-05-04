@@ -1,4 +1,5 @@
-from winappdbg import System import sys
+from winappdbg import System 
+import sys
 # Instance a System object.
 system = System()
 # Get the target application.
